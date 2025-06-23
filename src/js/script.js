@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '/images/SliderImages/sliderimage3.jpg',
         '/images/SliderImages/sliderimage4.jpg',
         '/images/SliderImages/sliderimage5.jpg',
-        '/images/SliderImages/sliderimage6.jpg'
+        '/images/SliderImages/sliderimage6.jpg' 
     ];
     // Gallery images (all images in src/images/ except Slider Images, bride.jpg, groom.jpg)
     const galleryImages = [
