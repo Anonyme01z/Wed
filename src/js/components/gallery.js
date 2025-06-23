@@ -20,7 +20,7 @@ export function initGallery(images) {
   galleryRoot.innerHTML = `
     <div class="gallery-container">
       <h2 class="section-title">Our Gallery</h2>
-      <div class="gallery-grid">
+      <div class="gallery-grid" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr);">
         ${displayImages.map((img, i) => `
           <div class="gallery-item">
             <img 
@@ -29,7 +29,7 @@ export function initGallery(images) {
               class="gallery-thumb" 
               data-idx="${i}" 
               loading="lazy"
-              onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100%25\\' height=\\'100%25\\'%3E%3Crect width=\\'100%25\\' height=\\'100%25\\' fill=\\'%23f0f0f0\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' dominant-baseline=\\'middle\\' text-anchor=\\'middle\\' font-family=\\'system-ui\\' fill=\\'%23999\\'%3EImage not found%3C/text%3E%3C/svg%3E';"
+              onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f0f0f0\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' fill=\'%23999\'%3EImage not found%3C/text%3E%3C/svg%3E';"
             />
           </div>
         `).join('')}

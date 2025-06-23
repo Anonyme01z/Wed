@@ -3,7 +3,9 @@ const NAV_LINKS = [
   { id: 'couple', label: 'The Couple' },
   { id: 'story', label: 'Our Story' },
   { id: 'events', label: 'Events' },
-  { id: 'gallery', label: 'Gallery' }
+  { id: 'gallery', label: 'Gallery' },
+  { id: 'pov-upload', label: 'Pov' },
+  { id: 'gifts', label: 'Gifts' }
 ];
 
 const SOCIALS = [

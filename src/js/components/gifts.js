@@ -10,13 +10,13 @@ export function initGifts() {
           <h3>Elizabeth Simeipri</h3>
           <p><strong>Bank:</strong> Zenith Bank</p>
           <p><strong>Account Number:</strong> <span class="account-number">1234567890</span></p>
-          <button class="copy-btn" data-account="1234567890">Copy Account</button>
+          <button class="copy-btn" data-account="1234567890"><i class="fas fa-clipboard"></i></button>
         </div>
         <div class="bank-card">
           <h3>Onabanjo Ibukunoluwa</h3>
           <p><strong>Bank:</strong> GTBank</p>
           <p><strong>Account Number:</strong> <span class="account-number">0987654321</span></p>
-          <button class="copy-btn" data-account="0987654321">Copy Account</button>
+          <button class="copy-btn" data-account="0987654321"><i class="fas fa-clipboard"></i></button>
         </div>
       </div>
     </div>
@@ -27,10 +27,10 @@ export function initGifts() {
     btn.onclick = function() {
       const acc = btn.getAttribute('data-account');
       navigator.clipboard.writeText(acc).then(() => {
-        btn.textContent = 'Copied!';
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
         btn.classList.add('copied');
         setTimeout(() => {
-          btn.textContent = 'Copy Account';
+          btn.innerHTML = '<i class="fas fa-clipboard"></i>';
           btn.classList.remove('copied');
         }, 1500);
       });

@@ -108,6 +108,7 @@ export class MusicPlayer {
     handleError(error) {
         console.error('Music player error:', error);
         this.updatePlayState(false);
+        alert('Music file not found. Please upload africanqueen.mp3 to the public/music folder or check the file path. For Vercel, the correct path is public/music/africanqueen.mp3');
     }
 
     destroy() {
@@ -125,7 +126,7 @@ export function initMusicPlayer() {
     player.className = 'music-player';
     player.innerHTML = `
       <audio id="background-music" loop>
-        <source src="./music/africanqueen.mp3" type="audio/mp3">
+        <source src="https://res.cloudinary.com/dp31tyn8m/video/upload/v1750692721/Couplemusic_roq965.mp3" type="audio/mp3">
       </audio>
       <div class="music-controls">
         <button id="music-toggle" aria-label="Play/Pause"><i class="fas fa-play"></i></button>
@@ -194,4 +195,8 @@ export function initMusicPlayer() {
       musicToggle.classList.add('playing');
     }).catch(() => {});
   }, 500);
+
+  music.addEventListener('error', () => {
+    alert('Music file not found. Please upload africanqueen.mp3 to the public/music folder or check the file path. For Vercel, the correct path is public/music/africanqueen.mp3');
+  });
 } 

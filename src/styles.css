@@ -236,6 +236,8 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     border: 1px solid var(--secondary-color);
+    border-left: 6px solid var(--accent-color);
+    position: relative;
 }
 
 .person.card:hover {
@@ -301,6 +303,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     border: 1px solid var(--secondary-color);
+    border-left: 6px solid var(--accent-color);
+    position: relative;
 }
 
 .story-text {
@@ -323,6 +327,8 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     border: 1px solid var(--secondary-color);
+    border-left: 6px solid var(--accent-color);
+    position: relative;
 }
 
 .event-card i {
@@ -381,6 +387,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    border-left: 6px solid var(--accent-color);
+    position: relative;
 }
 
 .gallery-item:hover {
@@ -535,6 +543,7 @@ body {
     border: 2px solid var(--accent-color);
     transition: box-shadow 0.2s, border 0.2s;
     position: relative;
+    border-left: 6px solid var(--accent-color);
 }
 .bank-card:hover {
     box-shadow: 0 12px 40px rgba(114,47,55,0.13);
@@ -718,6 +727,14 @@ footer {
     color: var(--accent-color);
 }
 
+.social-links a i {
+    transition: color 0.2s, transform 0.2s;
+}
+.social-links a:hover i, .social-links a:focus i {
+    color: var(--accent-color);
+    transform: scale(1.25) rotate(-10deg);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -861,13 +878,40 @@ nav {
 
 @media (max-width: 700px) {
   .nav-links {
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    display: none;
+    z-index: 1001;
   }
-  nav {
-    padding: 1rem 0.5rem;
+  .nav-links.open {
+    display: flex;
   }
-  .nav-brand {
-    font-size: 1.3rem;
+  .nav-links a {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
   }
 }
 
@@ -882,7 +926,7 @@ nav {
 /* Hero Slider */
 #hero-slider {
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -891,12 +935,12 @@ nav {
 }
 .slider-wrapper {
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   position: relative;
 }
 .slider-image {
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   background-size: cover;
   background-position: center;
   border-radius: 0 0 2rem 2rem;
@@ -941,6 +985,8 @@ nav {
   max-width: 320px;
   flex: 1 1 300px;
   transition: transform 0.2s;
+  border-left: 6px solid var(--accent-color);
+  position: relative;
 }
 .person-card:hover {
   transform: translateY(-8px) scale(1.03);
@@ -984,6 +1030,8 @@ nav {
   max-width: 700px;
   margin: 2rem auto;
   padding: 2rem 2.5rem;
+  border-left: 6px solid var(--accent-color);
+  position: relative;
 }
 .story-text {
   font-size: 1.15rem;
@@ -1173,8 +1221,8 @@ footer {
     align-items: center;
     gap: 2rem;
   }
-  .slider-wrapper, .slider-image, #hero-slider {
-    height: 40vh;
+  #hero-slider, .slider-wrapper, .slider-image {
+    height: 50vh;
   }
   .event-details {
     flex-direction: column;
@@ -1185,7 +1233,7 @@ footer {
   }
 }
 @media (max-width: 600px) {
-  .slider-wrapper, .slider-image, #hero-slider {
+  #hero-slider, .slider-wrapper, .slider-image {
     height: 28vh;
   }
   .countdown-grid {
@@ -1415,5 +1463,49 @@ footer {
   }
   #volume-slider {
     width: 60px;
+  }
+}
+
+/* --- Copy Button Icon Centering & Touch Area --- */
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.2rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+.copy-btn i {
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+}
+@media (max-width: 700px) {
+  .copy-btn {
+    width: 100%;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.3rem;
+    padding: 0.7rem 0;
+  }
+  .bank-card {
+    padding: 1.5rem 0.5rem 1.2rem 0.5rem;
+  }
+}
+
+/* --- Gallery Mobile Fix --- */
+@media (max-width: 700px) {
+  .gallery-item {
+    aspect-ratio: unset !important;
+    height: auto !important;
+    min-height: unset !important;
+    display: block;
+  }
+  .gallery-thumb {
+    height: auto !important;
+    width: 100% !important;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
   }
 } 
