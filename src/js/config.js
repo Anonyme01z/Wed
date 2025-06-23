@@ -1,12 +1,12 @@
 export const COUPLE = {
   bride: {
     name: "Elizabeth Simeipri",
-    image: "/images/bride.jpg",
+    image: "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750684760/bride_r1okgb.jpg",
     socials: { instagram: "#", facebook: "#" }
   },
   groom: {
     name: "Onabanjo Ibukunoluwa",
-    image: "/images/groom.jpg",
+    image: "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750672954/IMG_0521_tqgcjb.jpg",
     socials: { instagram: "#", facebook: "#" }
   }
 };
@@ -42,12 +42,12 @@ export const COLOR_OF_DAY = "Cream & Coffee Brown, and a touch of wine";
 
 // Static slider images served from public/images/SliderImages
 export const SLIDER_IMAGES = [
-  "/images/SliderImages/sliderimage1.jpg",
-  "/images/SliderImages/sliderimage2.jpg",
-  "/images/SliderImages/sliderimage3.jpg",
-  "/images/SliderImages/sliderimage4.jpg",
-  "/images/SliderImages/sliderimage5.jpg",
-  "/images/SliderImages/sliderimage6.jpg"
+  "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750685332/sliderimage1_2_n8z06o.jpg",
+  "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750686046/sliderimage2_1_omybnt.jpg",
+  "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750686050/sliderimage3_1_rsazzx.jpg",
+  "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750686055/sliderimage4_1_rbrsd2.jpg",
+  "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750686053/sliderimage5_1_iv2vpm.jpg",
+  "https://res.cloudinary.com/dp31tyn8m/image/upload/v1750672954/IMG_0521_tqgcjb.jpg"
 ];
 
 // Gallery images served from public/images/Gallery
