@@ -125,7 +125,7 @@ export function initMusicPlayer() {
     player.className = 'music-player';
     player.innerHTML = `
       <audio id="background-music" loop>
-        <source src="/music/africanqueen.mp3" type="audio/mp3">
+        <source src="./music/africanqueen.mp3" type="audio/mp3">
       </audio>
       <div class="music-controls">
         <button id="music-toggle" aria-label="Play/Pause"><i class="fas fa-play"></i></button>
