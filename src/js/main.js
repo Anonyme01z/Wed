@@ -8,12 +8,16 @@ import { initModal, openModal } from './components/modal.js';
 import { initNavbar } from './components/navbar.js';
 import { initFooter } from './components/footer.js';
 import { initMusicPlayer } from './components/musicPlayer.js';
+import { initGifts } from './components/gifts.js';
+import { initPovUpload } from './components/povUpload.js';
 import { COUPLE, EVENTS, RECEPTION, RSVP, COLOR_OF_DAY, SLIDER_IMAGES, GALLERY_IMAGES } from './config.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initSlider(SLIDER_IMAGES);
   initGallery(GALLERY_IMAGES);
+  initGifts();
+  initPovUpload();
   initCountdown(EVENTS[0].date);
   initCouple();
   initStory();
