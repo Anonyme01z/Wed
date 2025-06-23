@@ -1,15 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server.js", "use": "@vercel/node" },
-    { "src": "public/**", "use": "@vercel/static" },
-    { "src": "src/**", "use": "@vercel/static" }
+    { "src": "public/**/*", "use": "@vercel/static" },
+    { "src": "src/**/*", "use": "@vercel/static" },
+    { "src": "server.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/images/(.*)", "dest": "/public/images/$1" },
-    { "src": "/music/(.*)", "dest": "/public/music/$1" },
-    { "src": "/js/(.*)", "dest": "/src/js/$1" },
-    { "src": "/styles.css", "dest": "/src/styles.css" },
-    { "src": "/(.*)", "dest": "/server.js" }
+    { "src": "/images/(.*)", "headers": { "cache-control": "public, max-age=31536000, immutable" }, "dest": "/public/images/$1" },
+    { "src": "/music/(.*)", "headers": { "cache-control": "public, max-age=31536000, immutable" }, "dest": "/public/music/$1" },
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/server.js" }
   ]
 } 
