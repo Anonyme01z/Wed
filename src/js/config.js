@@ -12,9 +12,7 @@ export const COUPLE = {
     loveMost: "[Bride's what love most placeholder]",
     lookingForward: "[Bride's looking forward placeholder]",
     favoriteMemory: "[Bride's favorite memory placeholder]",
-    giftSection: true,
-    accountNumber: "[Bride's account number]",
-    bank: "[Bride's bank]"
+    giftSection: true
   },
   groom: {
     name: "Onabanjo Ibukunoluwa",
@@ -22,16 +20,12 @@ export const COUPLE = {
     socials: { instagram: "https://www.instagram.com/ibukunonabanjo?igsh=NWQ0dDl2d25mbHJ1" },
     bio: "Ibukunoluwa is a passionate sound engineer whose love for audio perfection is matched only by his heart for people. He brings calm, warmth, and intentionality into every room he walks into.",
     hobbies: "Cheering on Manchester United during the Premier League, enjoying good music, and spending quality time with loved ones.",  
-    // favoriteColor: "None",
-    // favoriteSong: "None",
     favoriteFood: "Good old beans — simple, hearty, and satisfying.",
     howMet: "We met in church — the best place to meet the love of your life.",
     loveMost: "Her quiet strength and the peace she carries.",
     lookingForward: "Building a Christ-centered home filled with love, laughter, and purpose.",
-    favoriteMemory: "Visiting each other’s parents — every moment was filled with joy, love, and reassurance.",
-    giftSection: true,
-    accountNumber: "0022992429",
-    bank: "GTBank"
+    favoriteMemory: "Visiting each other's parents — every moment was filled with joy, love, and reassurance.",
+    giftSection: true
   }
 };
 
