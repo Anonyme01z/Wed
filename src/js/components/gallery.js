@@ -20,17 +20,19 @@ export function initGallery(images) {
   galleryRoot.innerHTML = `
     <div class="gallery-container">
       <h2 class="section-title">Our Gallery</h2>
-      <div class="gallery-grid" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr);">
+      <div class="gallery-grid">
         ${displayImages.map((img, i) => `
-          <div class="gallery-item">
+          <div class="gallery-item" data-idx="${i}">
             <img 
               src="${img}" 
               alt="Gallery Image ${i+1}" 
               class="gallery-thumb" 
-              data-idx="${i}" 
               loading="lazy"
               onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f0f0f0\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' fill=\'%23999\'%3EImage not found%3C/text%3E%3C/svg%3E';"
             />
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+            </div>
           </div>
         `).join('')}
       </div>
@@ -39,10 +41,10 @@ export function initGallery(images) {
   `;
 
   // Open modal on image click
-  galleryRoot.querySelectorAll('.gallery-thumb').forEach(img => {
-    img.onclick = (e) => {
+  galleryRoot.querySelectorAll('.gallery-item').forEach(item => {
+    item.onclick = (e) => {
       e.preventDefault();
-      const idx = parseInt(img.dataset.idx, 10);
+      const idx = parseInt(item.dataset.idx, 10);
       if (!isNaN(idx)) {
         openModal(images, idx);
       }

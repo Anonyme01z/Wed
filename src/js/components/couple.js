@@ -4,7 +4,7 @@ export function initCouple() {
   const coupleRoot = document.getElementById('couple');
   if (!coupleRoot) return;
   coupleRoot.innerHTML = `
-    <div class="couple-cards">
+    <div class="couple-cards single">
       <div class="person-card">
         <img src="${COUPLE.groom.image}" alt="${COUPLE.groom.name}" class="person-img"/>
         <h3>${COUPLE.groom.name}</h3>
@@ -22,14 +22,6 @@ export function initCouple() {
           <p><strong>Looking Forward To:</strong> ${COUPLE.groom.lookingForward}</p>
           <p><strong>Favorite Memory:</strong> ${COUPLE.groom.favoriteMemory}</p>
           <p><strong>Account Number:</strong> ${COUPLE.groom.accountNumber} (${COUPLE.groom.bank})</p>
-        </div>
-      </div>
-      <div class="person-card">
-        <img src="${COUPLE.bride.image}" alt="${COUPLE.bride.name}" class="person-img"/>
-        <h3>${COUPLE.bride.name}</h3>
-        <div class="social-links">
-          <a href="${COUPLE.bride.socials.instagram}" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="${COUPLE.bride.socials.facebook}" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
     </div>

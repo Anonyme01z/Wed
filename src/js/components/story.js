@@ -3,28 +3,18 @@ export function initStory() {
   if (!storyRoot) return;
   storyRoot.innerHTML = `
     <h2 class="section-title">Our Love Story</h2>
-    <div class="story-card" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start; position:relative;">
-      <div class="story-half" style="flex:1 1 300px; min-width:260px; background:#fffbe6; border-radius:1rem; box-shadow:0 2px 8px rgba(114,47,55,0.07); padding:1.5rem; position:relative;">
-        <h3 style="font-size:1.3rem; color:var(--accent-color); margin-bottom:1rem;">Groom's View</h3>
+    <div class="story-card single-view">
         <p class="story-text">
-          I met my partner in church. What I love most about her is her quietness. I am most looking forward to Jesus in our marriage. My favorite memory together is our visits to our both parents.
-        </p>
-      </div>
-      <div class="love-animation" style="display:flex; align-items:center; justify-content:center; min-width:60px;">
-        <span class="heart-animate" style="font-size:2.5rem; animation:beat 1s infinite;">❤️</span>
-      </div>
-      <div class="story-half" style="flex:1 1 300px; min-width:260px; background:#fffbe6; border-radius:1rem; box-shadow:0 2px 8px rgba(114,47,55,0.07); padding:1.5rem; position:relative;">
-        <h3 style="font-size:1.3rem; color:var(--accent-color); margin-bottom:1rem;">Bride's View</h3>
-        <p class="story-text">
-          [Bride's story placeholder: Add her perspective here.]
-        </p>
-      </div>
+        Sometimes love is quietly watching from a distance, waiting for the right moment to unfold.<br><br>
+        For years, I would visit her house alongside a mutual friend who introduced her to me as his business partner. She was always the quiet one — calm, observant, and reserved. I, too, am an observer by nature, so I noticed her, as I noticed everything — but at the time, my heart was tangled in the remnants of old relationships and unspoken dreams.<br><br>
+        She lived in a house shared with other young women — all beautiful, all deserving of love. But there was something different about her silence, something that lingered with me long after each visit. For years, the thought of us remained a passing daydream — nothing more than a fleeting wish while I tried to heal old wounds and mend broken bonds elsewhere.<br><br>
+        Then came an unexpected night in 2023 that changed everything. During the fuel scarcity crisis, my car ran out of fuel late at night at the only open filling station in town — and they wouldn't take cards, only cash. Stranded and frustrated, I thought of her. Without hesitation, she drove from miles away, late at night, just to bring me the cash I needed. In that simple act of kindness and sacrifice, I saw her heart clearly for the first time — selfless, caring, and strong.<br><br>
+        At that moment, I realized: what more could a man want in a woman than someone so giving?<br><br>
+        As fate would have it, a short while later, during the elections, she was posted to my neighborhood as a polling official. When she handed me her voter's card, I couldn't resist checking her age — just to be sure I was older. That little confirmation gave my heart the courage it needed.<br><br>
+        By April 2023, I found my moment and asked her to be mine — and she said <b>yes</b>.<br><br>
+        Like every true love story, ours has weathered its share of seasons. We parted ways briefly in December, only to find our way back to each other in June 2024 — stronger, wiser, and more certain than ever that what we have is worth every twist and turn.<br><br>
+        This is our love — quiet, patient, sacrificial, and beautifully resilient. A story still being written, one precious moment at a time.
+      </p>
     </div>
-    <style>
-      @keyframes beat {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.25); }
-      }
-    </style>
   `;
 } 
